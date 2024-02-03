@@ -1,0 +1,286 @@
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+nav{
+  display: flex;
+  align-items: center;
+  padding: 2px 20px;
+  gap: 20px;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  font-weight: bold;
+}
+.logo{
+  height: 60px;
+  margin-right: auto;
+}
+.profpic{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.profpic img{
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+[for|="srv"]{
+  cursor: pointer;
+} 
+
+home{
+  padding: 10px 20px 10px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.videocard{
+  width: 31.9%;
+  text-decoration: none;
+  color: black;
+  margin-right: 1.4%;
+}
+.videocard:hover .thumbnail{
+  border-radius: 0;
+}
+.videodata{
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+.thumbnail{
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: all 0.4s;
+}
+.channelpic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.channelpic img{
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.videotitle{
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.channel{
+  margin-bottom: 5px;
+}
+
+main{
+  display: flex;
+  padding: 10px 40px;
+  gap: 20px;
+}
+.left{
+  width: 65%;
+}
+.videocontainer{
+  object-fit: contain;
+  height: 500px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.videocontainer video{
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.left .videotitle{
+  font-size: 1.3rem;
+}
+.videoinfo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.channelname{
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.right{
+  flex: 1;
+  border-radius: 10px;
+  border: thin solid gray;
+  padding: 10px;
+  height: auto;
+  overflow: scroll;
+}
+.right::-webkit-scrollbar {
+  display: none;
+}
+.minivideocard{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  gap: 10px;
+  margin: 12px 0px;
+  text-decoration: none;
+  color: black;
+}
+.minithumbnail{
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.minivideocard .videotitle{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+.minivideoinfo{
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.popupcontainer{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.popup{
+  background-color: white;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+.popup textarea{
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.popup button{
+  background-color: rgb(14, 149, 202);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.popup .load{
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.background{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('boys.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-container{
+  color: white;
+  background-color: black;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-container h1{
+  text-align: center;
+  margin: 0px;
+}
+.login-container p{
+  text-align: center;
+}
+.login-container p a{
+  color: white;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px 0px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: black;
+  color: white;
+}
+.form-group input:focus{
+  outline: none;
+}
+.form-group input::placeholder{
+  color: gray;
+}
+.form-group button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#blackscreen{
+  display: none;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 950px){
+  #blackscreen{
+    display: flex;
+  }
+  .background{
+    display: none;
+  }
+}
